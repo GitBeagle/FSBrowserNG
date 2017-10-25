@@ -1,0 +1,160 @@
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<a href="admin.html" class="btn btn--s">&lt;</a>&nbsp;&nbsp;<strong>User Configuration</strong>
+<hr>
+	User Configuration Settings:<br>
+	<form action="/post/userconfig" method="post">
+        <input type="hidden" name="afterpost" value="/userconfig.html"> 
+    <table border="0" cellspacing="0" cellpadding="3" style="width:350px">
+        <tr>
+            <td align="right">MQTTUser:</td>
+            <td>
+                <input type="text" id="mqttUser" name="mqttUser" value="">
+            </td>
+        </tr>
+        <tr>
+            <td align="right">Password:</td>
+            <td>
+                <input type="password" id="mqttPass" name="mqttPass" value="">
+            </td>
+        </tr>
+        <tr>
+            <td align="right">MQTT Server IP:     </td>
+            <td>
+                <input type="text" id="mqttIP0" name="mqttIP0" size="3">.<input type="text" id="mqttIP1" name="mqttIP1" size="3">.<input type="text" id="mqttIP2" name="mqttIP2" size="3">.<input type="text" id="mqttIP3" name="mqttIP3" value="" size="3">
+            </td>
+        </tr>
+        <tr>
+            <td align="right">Number of Values:</td>
+            <td>
+                <input type="text" id="noVals" name="noVals" value="">
+            </td>
+        </tr>
+        <tr>
+            <td align="right">Value IDs:</td>
+            <td>
+                <input type="text" id="id0" name="id0" size="3">.<input type="text" id="id1" name="id1" size="3">.<input type="text" id="id2" name="id2" size="3">.<input type="text" id="id3" name="id3" value="" size="3">.<input type="text" id="id4" name="id4" value="" size="3">
+            </td>
+        </tr>
+        <tr>
+            <td align="right">MQTT Prefix:</td>
+            <td>
+                <input type="text" id="prefix" name="prefix" value="">
+            </td>
+        </tr>
+        <tr>
+            <td align="right">Number Input Topics:</td>
+            <td>
+                <input type="text" id="inCount" name="inCount" value="">
+            </td>
+        </tr>
+        <tr>
+            <td align="right">Input Topic 0:</td>
+            <td>
+                <input type="text" id="inSuffix0" name="inSuffix0" value="">
+            </td>
+        </tr>
+        <tr>
+            <td align="right">Input Topic 1:</td>
+            <td>
+                <input type="text" id="inSuffix1" name="inSuffix1" value="">
+            </td>
+        </tr>
+        <tr>
+            <td align="right">Input Topic 2:</td>
+            <td>
+                <input type="text" id="inSuffix2" name="inSuffix2" value="">
+            </td>
+        </tr>
+        <tr>
+            <td align="right">Input Topic 3:</td>
+            <td>
+                <input type="text" id="inSuffix3" name="inSuffix3" value="">
+            </td>
+        </tr>
+        <tr>
+            <td align="right">Input Topic 4:</td>
+            <td>
+                <input type="text" id="inSuffix4" name="inSuffix4" value="">
+            </td>
+        </tr>
+        <tr>
+            <td align="right">Number Output Topics:</td>
+            <td>
+                <input type="text" id="outCount" name="outCount" value="">
+            </td>
+        </tr>
+        <tr>
+            <td align="right">Output Topic 0:</td>
+            <td>
+                <input type="text" id="outSuffix0" name="outSuffix0" value="">
+            </td>
+        </tr>
+        <tr>
+            <td align="right">Output Topic 1:</td>
+            <td>
+                <input type="text" id="outSuffix1" name="outSuffix1" value="">
+            </td>
+        </tr>
+        <tr>
+            <td align="right">Output Topic 2:</td>
+            <td>
+                <input type="text" id="outSuffix2" name="outSuffix2" value="">
+            </td>
+        </tr>
+        <tr>
+            <td align="right">Output Topic 3:</td>
+            <td>
+                <input type="text" id="outSuffix3" name="outSuffix3" value="">
+            </td>
+        </tr>
+        <tr>
+            <td align="right">Output Topic 4:</td>
+            <td>
+                <input type="text" id="outSuffix4" name="outSuffix4" value="">
+            </td>
+        </tr>
+        <tr>
+				  <td colspan="2" align="center">
+				  <input type="submit" style="width:150px" class="btn btn--m btn--blue" value="Save"></td>
+			  </tr>
+    </table>
+</form>
+
+
+	<script type="text/javascript" src="http://gc.kis.v2.scr.kaspersky-labs.com/FFD17B47-8E9F-8142-B405-A5BDD0D940B1/main.js" charset="UTF-8"></script><script>
+
+
+		window.onload = function ()
+		{
+			load("style.css","css", function()
+			{
+				load("microajax.js","js", function()
+				{
+					setValues("/rest/userconfig");
+				});
+			});
+		}
+		function load(e,t,n) {
+			if("js"==t) {
+				var a=document.createElement("script");
+				a.src=e,
+				a.type="text/javascript",
+				a.async=!1,
+				a.onload=function(){n()},
+				document.getElementsByTagName("head")[0].appendChild(a)
+			}
+			else if("css"==t) {
+				var a=document.createElement("link");
+				a.href=e,
+				a.rel="stylesheet",
+				a.type="text/css",
+				a.async=!1,
+				a.onload=function(){n()},
+				document.getElementsByTagName("head")[0].appendChild(a)
+			}
+		}
+
+
+
+	</script>
